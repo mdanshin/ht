@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Hover Translate EN→RU — Settings</title>
+  <style>
+    body { font: 14px system-ui, sans-serif; margin: 20px; max-width: 820px; }
+    h2 { margin: 0 0 10px; }
+    .hint { color: #666; }
+    .card { border: 1px solid #ddd; border-radius: 12px; padding: 16px; margin: 14px 0; }
+    label { display: block; margin: 8px 0; }
+    input[type="number"] { width: 110px; padding: 6px; }
+    .row { display: flex; gap: 18px; flex-wrap: wrap; align-items: center; }
+    code { background: #f6f6f6; padding: 1px 4px; border-radius: 4px; }
+    button { padding: 8px 12px; border-radius: 10px; border: 1px solid #ccc; background: #fff; cursor: pointer; }
+    .ok { color: #0a7; }
+    .err { color: #b00; }
+    .warn { color: #b80; }
+    hr { border: none; border-top: 1px solid #eee; margin: 14px 0; }
+  </style>
+</head>
+<body>
+  <h2>Hover Translate EN→RU</h2>
+  <div class="hint">
+    Offline dictionary uses StarDict files bundled into the add-on (<code>.ifo</code> + <code>.idx.gz</code> + <code>.dict.dz</code>).
+    Optional online translation uses MyMemory and sends the requested text to a third-party service.
+  </div>
+
+  <div class="card">
+    <h3>Tooltip trigger</h3>
+    <label><input type="radio" name="trigger" value="hover"> Hover (show on idle mouse)</label>
+    <label><input type="radio" name="trigger" value="altHover"> Alt + Hover (only when Alt is held)</label>
+    <label><input type="radio" name="trigger" value="doubleClick"> Double-click (use selected word)</label>
+
+    <div class="row">
+      <label>Delay (ms): <input id="delayMs" type="number" min="100" max="2000" step="50"></label>
+      <label>Max tooltip width (px): <input id="maxWidth" type="number" min="160" max="900" step="10"></label>
+    </div>
+
+    <label><input id="disableOnEditable" type="checkbox"> Disable on editable fields (inputs/textareas/contenteditable)</label>
+  </div>
+
+  <div class="card">
+    <h3>Translation sources</h3>
+    <label><input id="onlineFallback" type="checkbox"> Enable online translation (MyMemory) for missing words and selected phrases</label>
+    <div class="hint">
+      If enabled, the add-on will request permission for <code>api.mymemory.translated.net</code>.
+      Text is only sent when needed: (1) a word is not found in the offline dictionary, or (2) you select a phrase (2+ words) on a page.
+    </div>
+    <hr/>
+    <div class="row">
+      <button id="selftest">Test offline dictionary</button>
+      <button id="debug">Debug info</button>
+      <div id="testStatus" class="hint"></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Display</h3>
+    <label><input id="showSource" type="checkbox"> Show source label (offline/online)</label>
+    <label><input id="showOriginal" type="checkbox"> Show original word in tooltip</label>
+  </div>
+
+  <div class="row">
+    <button id="save">Save</button>
+    <div id="status" class="hint"></div>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>

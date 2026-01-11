@@ -1,0 +1,64 @@
+{
+  "manifest_version": 2,
+  "name": "DMS Hover Translate EN→RU (StarDict)",
+  "version": "0.3.1",
+  "description": "Translate EN→RU using bundled StarDict dictionary. Liquid-glass hover tooltip + pronunciation button. Optional online translation for missing words and selected phrases (MyMemory).",
+  "permissions": [
+    "storage",
+    "https://api.dictionaryapi.dev/*"
+  ],
+  "optional_permissions": [
+    "https://api.mymemory.translated.net/*"
+  ],
+  "background": {
+    "scripts": [
+      "stardict.js",
+      "background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "browser_action": {
+    "default_title": "Translate EN→RU",
+    "default_icon": {
+      "16": "icons/translate-cards-16.png",
+      "32": "icons/translate-cards-32.png"
+    }
+  },
+  "icons": {
+    "16": "icons/translate-cards-16.png",
+    "32": "icons/translate-cards-32.png",
+    "48": "icons/translate-cards-48.png",
+    "96": "icons/translate-cards-96.png"
+  },
+  "short_name": "DMS Hover Translate",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "dms-hover-translate-enru@danshin.ms",
+      "strict_min_version": "140.0",
+      "data_collection_permissions": {
+        "required": [
+          "websiteContent"
+        ],
+        "optional": []
+      }
+    },
+    "gecko_android": {
+      "strict_min_version": "142.0"
+    }
+  }
+}
