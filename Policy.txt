@@ -1,0 +1,136 @@
+# Политика конфиденциальности / Privacy Policy
+## DMS Hover Translate EN→RU (StarDict)
+
+**Дата вступления в силу / Effective date:** 2026-01-11
+
+### 1) Коротко (что важно)
+Расширение **DMS Hover Translate EN→RU (StarDict)** показывает перевод при наведении на английские слова.
+- Основной перевод выполняется **локально (офлайн)** с помощью встроенного словаря StarDict.
+- Онлайн-функции **выключены по умолчанию** и включаются только пользователем:
+  - Online fallback переводов через **MyMemory** для слов, которых нет в офлайн-словаре, и для выделенных фраз.
+- Кнопка произношения запрашивает данные у **dictionaryapi.dev** только при нажатии пользователем.
+
+Расширение **не использует аналитику/телеметрию**, не продаёт данные и не создаёт профили пользователей.
+
+---
+
+### 2) Какие данные обрабатываются локально
+Чтобы показать перевод, расширение читает **текст страницы** в момент действия пользователя (наведение на слово, либо выделение фразы).  
+Эти данные обрабатываются **локально в браузере** для:
+- определения слова/фразы,
+- поиска в офлайн-словаре,
+- отображения результата в всплывающем tooltip.
+
+---
+
+### 3) Когда данные могут отправляться в интернет (опционально)
+#### 3.1 Online fallback перевод (MyMemory) — **только если включено**
+Если пользователь включил настройку **Online fallback (MyMemory)**, расширение может отправлять:
+- слово, на которое навели курсор (если оно отсутствует в офлайн-словаре), или
+- выделенную пользователем фразу (для перевода фраз)
+
+на сервис MyMemory через API.
+
+Если Online fallback выключен — запросы к MyMemory **не выполняются**.
+
+**Важно:** при обращении к MyMemory (как и к любому веб-сервису) сервис может видеть стандартные сетевые данные, например IP-адрес и заголовки HTTP.
+
+#### 3.2 Произношение (dictionaryapi.dev) — **только по нажатию кнопки**
+Если пользователь нажимает кнопку произношения, расширение отправляет **само слово** на dictionaryapi.dev, чтобы получить ссылки на аудио/фонетику.  
+Далее воспроизведение аудио может загружать файл с внешнего хоста, который указан в ответе dictionaryapi.dev.
+
+Если кнопку произношения не нажимать — запросы к dictionaryapi.dev **не выполняются**.
+
+---
+
+### 4) Какие данные сохраняются на устройстве
+Расширение может хранить **локально в браузере**:
+- настройки (режим наведения/Alt, задержка, ширина tooltip, включён ли Online fallback и т.п.),
+- кэш результатов переводов и/или данных произношения (для ускорения работы).
+
+Эти данные не отправляются разработчику.
+
+---
+
+### 5) Чего расширение НЕ делает
+- не собирает аналитику и статистику использования,
+- не отслеживает историю посещений,
+- не отправляет данные разработчику,
+- не продаёт и не передаёт персональные данные третьим лицам, кроме случаев, описанных в разделе 3 (и только по действию/настройке пользователя).
+
+---
+
+### 6) Управление приватностью (как отключить онлайн)
+Вы можете:
+- держать **Online fallback** выключенным (режим офлайн-перевода),
+- не пользоваться кнопкой произношения, если не хотите сетевых запросов,
+- очистить данные расширения через настройки браузера (удалит кэш и настройки).
+
+---
+
+### 7) Контакты
+Если у вас есть вопросы по конфиденциальности, напишите:
+- **Email:** mdanshin@gmail.com
+- **Website:** https://danshin.ms/ht
+
+---
+
+# English version
+
+## Privacy Policy — DMS Hover Translate EN→RU (StarDict)
+**Effective date:** 2026-01-11
+
+### 1) Overview
+DMS Hover Translate EN→RU (StarDict) shows translations on hover.
+- The primary translation is performed **locally (offline)** using a bundled StarDict dictionary.
+- Online features are **disabled by default** and are enabled only by the user:
+  - Optional online fallback translation via **MyMemory** for missing words and user-selected phrases.
+- The pronunciation button queries **dictionaryapi.dev** only when the user clicks it.
+
+The extension does **not** use analytics/telemetry, does not sell data, and does not build user profiles.
+
+### 2) Data processed locally
+To display a translation, the extension reads **page text** at the time of user interaction (hovered word or selected phrase).  
+This data is processed **locally in the browser** to identify the word/phrase, look it up offline, and render the tooltip.
+
+### 3) When data may be sent over the network (optional)
+#### 3.1 Online fallback (MyMemory) — only if enabled
+If the user enables **Online fallback (MyMemory)**, the extension may send:
+- the hovered word (only if not found offline), or
+- the user-selected phrase (for phrase translation)
+
+to the MyMemory translation API.
+
+If Online fallback is disabled, no MyMemory requests are made.
+
+**Note:** As with any web service, MyMemory may receive standard network data (e.g., IP address and HTTP headers).
+
+#### 3.2 Pronunciation (dictionaryapi.dev) — only on button click
+When the user clicks the pronunciation button, the extension sends the **word itself** to dictionaryapi.dev to obtain phonetics/audio links.  
+Audio playback may then fetch an audio file from an external host referenced by dictionaryapi.dev.
+
+If the pronunciation button is not used, no dictionaryapi.dev requests are made.
+
+### 4) Data stored on your device
+The extension may store locally:
+- settings (trigger mode, delay, tooltip width, whether online fallback is enabled, etc.),
+- cached translation/pronunciation results (to improve performance).
+
+This data is not sent to the developer.
+
+### 5) What the extension does NOT do
+- no analytics/telemetry,
+- no browsing-history tracking,
+- no data sent to the developer,
+- no selling or sharing personal data, except as described in Section 3 and only via user-enabled features/actions.
+
+### 6) Privacy controls
+You can:
+- keep **Online fallback** disabled for offline-only mode,
+- avoid using the pronunciation button if you do not want network requests,
+- clear extension data via your browser settings (removes cache and settings).
+
+### 7) Contact
+Questions about privacy:
+- **Email:** mdanshin@gmail.com
+- **Website:** https://danshin.ms/ht
